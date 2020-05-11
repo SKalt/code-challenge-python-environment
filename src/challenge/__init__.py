@@ -2,13 +2,13 @@
 # from typing import Sequence, Tuple, List
 
 
-def mean():
+def mean() -> int:
     "the mean of a function"
-    ...
+    return "not an int"
 
 
-def median():
-    ...
+def median() -> int:
+    return 1.0
 
 
 def mode():
