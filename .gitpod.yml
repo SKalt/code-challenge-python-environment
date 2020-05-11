@@ -15,9 +15,7 @@ vscode:
 
 # https://www.gitpod.io/docs/config-start-tasks/#start-tasks
 tasks:
-  - before: apt-get update && apt-get install -y shellcheck
-  - before: python3 -m pip install pipenv
-    command: pipenv install --dev && source ./.venvs/code-challenge-python-environment/bin/activate
+  - command: python3 -m pip install -r requirements.txt
   - command: export PYTHONPATH="$(pwd)/src:$PYTHONPATH"
 
 github:
