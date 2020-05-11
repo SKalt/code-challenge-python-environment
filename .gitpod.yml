@@ -17,7 +17,8 @@ vscode:
 tasks:
   - command: apt-get update && apt-get install shellcheck
   - command: |
-      python3 -m pip install pipenv &&
+      su gitpod &&
+        python3 -m pip install pipenv &&
         pipenv sync &&
         pipenv shell
   - command: export PYTHONPATH="$(pwd)/src:$PYTHONPATH"
