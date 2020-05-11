@@ -15,10 +15,14 @@ vscode:
 
 # https://www.gitpod.io/docs/config-start-tasks/#start-tasks
 tasks:
-  - command: apt-get update && apt-get install shellcheck
+  - command: apt-get update && apt-get install -y shellcheck
   - command: |
       su gitpod &&
         python3 -m pip install pipenv &&
         pipenv sync &&
         pipenv shell
   - command: export PYTHONPATH="$(pwd)/src:$PYTHONPATH"
+
+github:
+  prebuilds:
+    master: true
