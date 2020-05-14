@@ -10,3 +10,7 @@ def test_all_the_same_numbers(n: int) -> None:
         actual == expected
     ), f"averaging a bunch of {n}s would produce {n}; it produced {actual}"
     return
+
+
+def test_empty_input():
+    assert mean([]) == 0
